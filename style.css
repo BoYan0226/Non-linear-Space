@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+
+    background-image: url("./background.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    font-family: 'Cormorant Garamond', serif;
+    color: white;
+}
+
+.tag {
+    position: absolute;
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: 3px;
+
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+
+    opacity: 0.8;
+    filter: blur(4px);
+
+    animation: float 8s ease-in-out infinite;
+
+    transition:
+        opacity 0.6s ease,
+        filter 0.6s ease,
+        transform 0.6s ease,
+        text-shadow 0.6s ease;
+}
+
+.tag:hover {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(-20px);
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,0.7),
+        0 0 16px rgba(255,255,255,0.5),
+        0 0 24px rgba(255,255,255,0.3);
+}
+
+.tag1 {
+    top: 20%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.tag2 {
+    top: 60%;
+    left: 40%;
+    animation-delay: 2s;
+}
+
+.tag3 {
+    top: 40%;
+    left: 70%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
