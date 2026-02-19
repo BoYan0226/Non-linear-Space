@@ -1,0 +1,59 @@
+body {
+    margin:0;
+    height:100vh;
+    overflow:hidden;
+
+    background-image: url("./background.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    font-family: 'Cormorant Garamond', serif;
+    color:white;
+}
+
+.story {
+    width:420px;
+    max-width:90vw;
+    margin:0 auto;
+    line-height:1.9;
+    font-size:19px;
+    letter-spacing:0.4px;
+}
+
+.story p {
+    margin-bottom:28px;
+    opacity:0.85;
+    filter: blur(0.5px);
+    animation: flicker 1s infinite alternate;
+}
+
+.back-home{
+    position:fixed;
+    bottom:60px;
+    right: 90px;
+
+    font-size:20px;
+    letter-spacing:2px;
+    text-decoration:none;
+    color:white;
+
+    opacity:0.25;
+    filter:blur(1px);
+
+    transition:
+        opacity 0.4s ease,
+        filter 0.4s ease,
+        text-shadow 0.4s ease;
+
+    z-index:20;
+}
+
+.back-home:hover{
+    opacity:1;
+    filter:blur(0px);
+
+    text-shadow:
+        0 0 6px rgba(255,255,255,0.5),
+        0 0 12px rgba(255,255,255,0.2);
+}
